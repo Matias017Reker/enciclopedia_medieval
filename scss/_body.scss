@@ -1,0 +1,177 @@
+body{
+    background-color: $background-color;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-acordeon{
+    width: 100%;
+    align-items: center;
+}
+
+.acordeon {
+    background: $background-color-acordeon;
+    border-radius: 5px;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+
+    label {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background: $label-background-color;
+    color: $color-white;
+    cursor: pointer;
+    margin-bottom: 2px;
+    @include transition-ease;
+
+    &:hover {
+        background: $label-hover-background-color;
+    }
+    }
+
+    .contenido-acordeon {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    @include transition-ease;
+    }
+
+    .btn-acordeon {
+    display: none;
+
+    &:checked ~ .contenido-acordeon {
+        max-height: 9000px;
+        padding: 15px 0px;
+    }
+    }
+}
+.box {
+    width: 30%;
+    height: 30%;
+    margin: 0px 35%;
+    text-align: center;
+    border: $color-dark;
+    background-color: $color-box;
+}
+
+.box-direc {
+    width: 50%;
+    height: 50%;
+    padding: 0px 150px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+p {
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-align: justify;
+    padding: 5px 5%;
+}
+.sub-tt {
+    @include padding-align(0 45%);
+    font-weight: bold;
+}
+
+section {
+    @include flex-center;
+    flex-direction: column;
+
+    input,
+    input[type="submit"],
+    p {
+    margin-bottom: 10px;
+    }
+
+    p:last-child {
+    margin-bottom: 0;
+    }
+
+    input[type="submit"] {
+    width: auto;
+    }
+}
+
+textarea {
+    width: 98%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 10px 10px 10px 10px;
+}
+
+input[value="Enviar"] {
+    margin: 10px 10px 10px;
+    margin-left: 45%;
+
+    &:hover {
+    background-color: #929292;
+    }
+}
+
+.box-reg {
+    width: 40%;
+    height: 40%;
+    margin: 0px 30%;
+    text-align: center;
+    border: $color-dark;
+    background-color: $color-box-reg;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+}
+
+input {
+    padding: 10px;
+    margin: 0px 85%;
+    padding-right: 35px;
+    border-radius: 5px 0px 5px;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+    align-content: center;
+}
+
+button {
+    background-color: $color-box-reg;
+    border: 0px;
+    padding: 10px 15px;
+    margin: 0px;
+    border-radius: 0px 5px 5px 0px;
+
+    &:hover {
+    background-color: $hover-background-color-menu;
+    }
+}
+
+.box-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 1rem 1 1rem;
+}
+
+.box-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-img{
+    margin: 4px 6px;
+}
+
+main{
+    min-height: calc(100vh - 243px);
+}

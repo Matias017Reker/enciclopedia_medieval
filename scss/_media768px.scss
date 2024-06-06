@@ -1,0 +1,68 @@
+@media screen and (max-width: 768px) {
+    .menu {
+    height: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:hover {
+        background-color: $color-box;
+    }
+
+    .h1{
+        padding: 5px 20px;
+        font-size: 1.5em;
+    }
+
+    .h2{
+        @include center-content
+    }
+
+    .pag {
+        background-color: $color-box;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+        gap: 2rem;
+        left: 0;
+        @include transition-ease;
+
+        .menu-hamburguesa:checked + & {
+        height: calc(100vh - 80px);
+        width: 360px;
+        }
+    }
+
+    .menu-hamburguesa {
+        display: none;
+        }
+    }
+}
+
+    .labe_hamburguesa {
+    display: none;
+}
+.ul_links{
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+}
+.link{
+    font-size: 1.2rem;
+    transition: all .3s;
+    padding: .2rem .7rem;
+}
+.link:hover{
+    background-color: #ca914c;
+}
+

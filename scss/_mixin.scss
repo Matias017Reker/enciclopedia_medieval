@@ -1,0 +1,27 @@
+@mixin padding-align($padding, $align: center) {
+    padding: $padding;
+    text-align: $align;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin grid-template($columns, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin transition-ease($property: all, $duration: 1000ms, $timing: ease) {
+    transition: $property $duration $timing;
+}
+
+@mixin center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    text-align: center;
+}

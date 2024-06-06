@@ -1,0 +1,44 @@
+html{
+    $font-family-sans-serif: sans-serif;
+    $font-family-open-sans: 'Open Sans', sans-serif;
+    
+    h1 {
+        @include center-content
+    }
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 35px;
+        @include padding-align(0px 20%);
+    }
+    
+    h3{
+        margin: 4px 3px 3px;
+    }
+    
+    h4{
+        margin: 4px 3px 3px;
+    }
+
+    h5{
+        margin: 4px 3px 3px;
+    }
+
+    h6{
+        margin: 4px 3px 3px;
+    }
+    
+    a {
+        color: $color-dark;
+        font-family: Arial, sans-serif;
+        text-decoration: none;
+        
+        &:hover {
+        color: $color-hover-link;
+        }
+    }
+    
+    li {
+        font-family: $font-family-sans-serif;
+    }
+}
